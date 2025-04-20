@@ -1,5 +1,5 @@
 # 3D_classification
-This implementation is based on a previous work <a href="https://github.com/FedericoGelain/3DP_homeworks/tree/main/HW4%20-%203D%20Deep%20Descriptors"> PointNet 3D deep descriptors </a>, which has been reorganized in Python files.
+This implementation is based on my previous work <a href="https://github.com/FedericoGelain/3DP_homeworks/tree/main/HW4%20-%203D%20Deep%20Descriptors"> PointNet 3D deep descriptors </a>, which has been reorganized in Python files.
 Install the project dependencies:
 ```sh
  pip install -r requirements.txt
