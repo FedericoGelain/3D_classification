@@ -1,11 +1,10 @@
-# 3D_classification
-# 3D_classification
-This implementation is based on a previous work <a href="https://github.com/FedericoGelain/3DP_homeworks/tree/main/HW4%20-%203D%20Deep%20Descriptors"> PointNet 3D deep descriptors </a>, which has been reorganized in Python files.
+# VoxNet
+This implementation is based on <a href="https://ieeexplore.ieee.org/document/7353481"> VoxNet 3D Convolutional Network</a> to classify 3D objects represented as voxel grids. <br />
 Install the project dependencies:
 ```sh
  pip install -r requirements.txt
 ```
-Download the dataset <a href="https://www.kaggle.com/datasets/balraj98/modelnet10-princeton-3d-object-dataset"> here </a>
+Download the **ModelNet10** dataset <a href="https://www.kaggle.com/datasets/balraj98/modelnet10-princeton-3d-object-dataset"> here </a>
 First you need to create the voxel grids out of the downloaded meshes. To do so run the following command:
 ```sh
  python .\files_preparation.py ModelNet10 -f -x
