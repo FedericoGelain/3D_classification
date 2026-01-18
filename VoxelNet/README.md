@@ -15,7 +15,7 @@ To then run the training type the following command:
  python train_model.py
 ```
 
-## 📁 Project Structure
+## Project Structure
 
 ```sh
 └── PointNet/
@@ -25,3 +25,10 @@ To then run the training type the following command:
   ├── VoxelDataset.py
   └── voxelnet.py
 ```
+
+## Best Training Result so far
+<p float="left">
+<img src="loss.jpg" width=40% height=40%>
+<img src="confusion_matrix.png" width=40% height=40%>
+</p>
+
