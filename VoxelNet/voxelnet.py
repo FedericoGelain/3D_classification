@@ -26,7 +26,8 @@ class VoxNet(nn.Module):
         # batch normalization per layer
         self.bn1 = nn.BatchNorm3d(32)
         self.bn2 = nn.BatchNorm3d(7)
-        self.bnRes = nn.BatchNorm3d(32)
+        self.bnRes1 = nn.BatchNorm3d(32)
+        self.bnRes2 = nn.BatchNorm3d(32)
 
         # Fully connected layers
         self.fc1 = nn.Linear(7 * 5 * 5 * 5, 128)
@@ -34,7 +35,7 @@ class VoxNet(nn.Module):
 
         # Misc
         self.relu = nn.ReLU()
-        self.dropout = nn.Dropout(0.5)
+        self.dropout = nn.Dropout(0.3)
 
     def forward(self, x):
         # First convolutional layer
@@ -46,14 +47,14 @@ class VoxNet(nn.Module):
         shortcut = x.clone()
 
         x = self.convRes(x)
-        x = self.bnRes(x)
+        x = self.bnRes1(x)
         x = self.relu(x)
 
         x = shortcut + x  # this helps preserve gradient flow and improve training
         shortcut = x.clone()
 
         x = self.convRes(x)
-        x = self.bnRes(x)
+        x = self.bnRes2(x)
         x = self.relu(x)
 
         x = shortcut + x
